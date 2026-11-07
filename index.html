@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="CocoTube — descubra vídeos, canais e Shorts.">
+  <title>CocoTube</title>
+  <link rel="icon" href="assets/coconut.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-button" id="menuToggle" aria-label="Abrir menu">☰</button>
+    <a class="brand" href="#" data-page="home" aria-label="CocoTube início"><span class="brand-icon">🥥</span><span>CocoTube</span></a>
+    <form class="search" id="searchForm">
+      <input id="searchInput" type="search" placeholder="Pesquisar" autocomplete="off" aria-label="Pesquisar vídeos">
+      <button type="submit" aria-label="Pesquisar">⌕</button>
+    </form>
+    <div class="top-actions">
+      <button class="icon-button" id="historyQuick" title="Histórico">◷</button>
+      <button class="user-avatar" id="profileButton" title="Perfil">C</button>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <button class="nav-item active" data-page="home"><span>⌂</span><b>Início</b></button>
+      <button class="nav-item" data-page="shorts"><span>▣</span><b>Shorts</b></button>
+      <button class="nav-item" data-page="subscriptions"><span>▤</span><b>Inscrições</b></button>
+      <div class="nav-divider"></div>
+      <p class="nav-heading">Você</p>
+      <button class="nav-item" data-page="channel"><span>◉</span><b>Seu canal</b></button>
+      <button class="nav-item" data-page="history"><span>◷</span><b>Histórico</b></button>
+      <button class="nav-item" data-page="liked"><span>♡</span><b>Vídeos curtidos</b></button>
+      <button class="nav-item" data-page="saved"><span>▱</span><b>Assistir mais tarde</b></button>
+      <div class="nav-divider"></div>
+      <p class="nav-heading">Explorar</p>
+      <button class="nav-item" data-category="Música"><span>♫</span><b>Música</b></button>
+      <button class="nav-item" data-category="Jogos"><span>🎮</span><b>Jogos</b></button>
+      <button class="nav-item" data-category="Aprendizado"><span>▣</span><b>Aprendizado</b></button>
+      <button class="nav-item" data-category="Tecnologia"><span>⌘</span><b>Tecnologia</b></button>
+    </nav>
+    <div class="sidebar-foot">CocoTube · Projeto independente</div>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="chips" id="chips">
+      <button class="chip active" data-category="Todos">Todos</button>
+      <button class="chip" data-category="Música">Música</button>
+      <button class="chip" data-category="Jogos">Jogos</button>
+      <button class="chip" data-category="Aprendizado">Aprendizado</button>
+      <button class="chip" data-category="Tecnologia">Tecnologia</button>
+      <button class="chip" data-category="Entretenimento">Entretenimento</button>
+      <button class="chip" data-category="Natureza">Natureza</button>
+    </div>
+    <section id="content" aria-live="polite"></section>
+  </main>
+
+  <dialog class="video-dialog" id="videoDialog">
+    <div class="dialog-head"><span class="dialog-label">CocoTube player</span><button class="icon-button" id="closeDialog" aria-label="Fechar">×</button></div>
+    <div id="videoDetails"></div>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
